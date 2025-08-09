@@ -41,6 +41,10 @@ app.use('/api/orders', orderRoutes); // ADD THIS ROUTE
 app.use('/api/analysis', analysisRoutes); // ADD THIS ROUTE
 app.use('/api/faqs', faqRoutes); // ADD THIS ROUTE
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Symptra Health API!');
+})
+
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || 'Internal Server Error';
