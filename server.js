@@ -42,7 +42,10 @@ app.use('/api/analysis', analysisRoutes); // ADD THIS ROUTE
 app.use('/api/faqs', faqRoutes); // ADD THIS ROUTE
 
 app.get('/', (req, res) => {
-  res.send('Welcome to the Symptra Health API!');
+  res.send({
+    activeStatus:true,
+    error:false,
+  })
 })
 
 app.use((err, req, res, next) => {
