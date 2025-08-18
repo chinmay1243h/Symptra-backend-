@@ -16,7 +16,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:8080',
+  origin: 'https://symptra-frontend.vercel.app/',
   credentials: true,
 }));
 app.use(express.json());
